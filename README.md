@@ -1,8 +1,6 @@
-# moleculer-ts
+# Moleculer-ts
 
-This is a [Moleculer](https://moleculer.services/)-based microservices project.
-
-# Moleculer microservices framework with typescript
+This is a [Moleculer](https://moleculer.services/)-based microservices project with typescript
 
 -   Install Moleculer CLI
 
