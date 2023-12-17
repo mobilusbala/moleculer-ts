@@ -1,42 +1,60 @@
-[![Moleculer](https://badgen.net/badge/Powered%20by/Moleculer/0e83cd)](https://moleculer.services)
+# moleculer-ts
 
-# moleculer-typescript
-This is a [Moleculer](https://moleculer.services/)-based microservices project. Generated with the [Moleculer CLI](https://moleculer.services/docs/0.14/moleculer-cli.html).
+This is a [Moleculer](https://moleculer.services/)-based microservices project.
 
-## Usage
-Start the project with `npm run dev` command. 
-After starting, open the http://localhost:3000/ URL in your browser. 
-On the welcome page you can test the generated services via API Gateway and check the nodes & services.
+# Moleculer microservices framework with typescript
 
-In the terminal, try the following commands:
-- `nodes` - List all connected nodes.
-- `actions` - List all registered service actions.
-- `call greeter.hello` - Call the `greeter.hello` action.
-- `call greeter.welcome --name John` - Call the `greeter.welcome` action with the `name` parameter.
-- `call products.list` - List the products (call the `products.list` action).
+-   Install Moleculer CLI
 
+           npm i -g moleculer-cli
 
-## Services
-- **api**: API Gateway services
-- **greeter**: Sample service with `hello` and `welcome` actions.
-- **products**: Sample DB service. To use with MongoDB, set `MONGO_URI` environment variables and install MongoDB adapter with `npm i moleculer-db-adapter-mongo`.
+-   Generate Moleculer Project
 
-## Mixins
-- **db.mixin**: Database access mixin for services. Based on [moleculer-db](https://github.com/moleculerjs/moleculer-db#readme)
+          moleculer init project-typescript moleculer-typescript
 
+-   Enabled And Disabled Microservice features
 
-## Useful links
+    -   Add API Gateway (moleculer-web) service? (Y/n) Y
+    -   Add API Gateway (moleculer-web) service? Yes
+    -   Would you like to communicate with other nodes? (Y/n) Y
+    -   Would you like to communicate with other nodes? Yes
+    -   Select a transporter (Use arrow keys)
+    -   Select a transporter NATS (recommended)
+    -   Would you like to use cache? (y/N) Y
+    -   Would you like to use cache? Yes
+    -   Select a cacher solution
+    -   Select a cacher solution Redis
+    -   Add DB sample service? (Y/n) Y
+    -   Add DB sample service? Yes
+    -   Would you like to enable metrics? (Y/n) Y
+    -   Would you like to enable metrics? Yes
+    -   Select a reporter solution (Use arrow keys)
+    -   Select a reporter solution Prometheus
+    -   Would you like to enable tracing? (Y/n) Y
+    -   Would you like to enable tracing? Yes
+    -   Select an exporter solution
+    -   Select an exporter solution Zipkin
+    -   Add Docker & Kubernetes sample files? (Y/n) Y
+    -   Add Docker & Kubernetes sample files? Yes
+    -   Use ESLint to lint your code? (Y/n) Y
+    -   Use ESLint to lint your code? Yes
+    -   reate 'moleculer-typescript' folder...
+    -   Would you like to run 'npm install'? (Y/n) Y
+    -   Would you like to run 'npm install'? Yes
 
-* Moleculer website: https://moleculer.services/
-* Moleculer Documentation: https://moleculer.services/docs/0.14/
+## Run
+
+        npm run dev
+
+After starting, open the http://localhost:3000/ URL in your browser.
 
 ## NPM scripts
 
-- `npm run dev`: Start development mode (load all services locally with hot-reload & REPL)
-- `npm run start`: Start production mode (set `SERVICES` env variable to load certain services)
-- `npm run cli`: Start a CLI and connect to production. Don't forget to set production namespace with `--ns` argument in script
-- `npm run lint`: Run ESLint
-- `npm run ci`: Run continuous test mode with watching
-- `npm test`: Run tests & generate coverage report
-- `npm run dc:up`: Start the stack with Docker Compose
-- `npm run dc:down`: Stop the stack with Docker Compose
+-   `npm run dev`: Start development mode (load all services locally with hot-reload & REPL)
+-   `npm run start`: Start production mode (set `SERVICES` env variable to load certain services)
+-   `npm run cli`: Start a CLI and connect to production. Don't forget to set production namespace with `--ns` argument in script
+-   `npm run lint`: Run ESLint
+-   `npm run ci`: Run continuous test mode with watching
+-   `npm test`: Run tests & generate coverage report
+-   `npm run dc:up`: Start the stack with Docker Compose
+-   `npm run dc:down`: Stop the stack with Docker Compose
